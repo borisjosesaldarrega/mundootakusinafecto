@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Anime</title>
+    <link rel="icon" href="fotos de pagina/mundootaku.png" type="image/png">
+    <link rel="stylesheet" href="pruebabosstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+</head>
+<body>
+    <!--
+    <nav class="navigation">
+        <a class="#"> </a>
+        <button class="btnLogin-popup">Login</button>
+    </nav>
+-->
+    
+    <header class="text-white text-center fade-in">
+        <h1>🌸 Bienvenido al mundo otaku sin afecto femenino 🌸</h1>
+        <p>Todo sobre waifus, mangas, animes, y lolis (con responsabilidad)</p>
+    </header>
+
+       <!-- Botón hamburguesa -->
+        <button id="toggleMenu" class="hamburger-btn" aria-label="Menú de usuario">☰</button>
+
+        <!-- Menú hamburguesa -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+        <div class="avatar-section" id="avatarSection">
+            <div class="avatar" id="userAvatar"></div>
+            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+            <div class="user-info">
+            <p id="userName" >Invitado</p>
+            <p id="userEmail">No has iniciado sesión</p>
+            </div>
+        </div>
+        
+        <ul class="menu-options" id="menuOptions">
+            <li id="loginOption" class="btnLogin-popup">Iniciar sesión</li>
+            <li id="changeAccount" style="display: none;">Cambiar cuenta</li>
+            <li id="logoutOption" style="display: none;">Cerrar sesión</li>
+        </ul>
+        </div>
+
+    <div class="text-center mt-4 mb-5">
+        <h2 style="font-size: 2rem; font-weight: 700; color: #0067ce; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">
+            ✨ Consejo Otaku Random
+        </h2>
+        <div style="margin-top: 1rem; background-color: #d4d4d4; padding: 15px 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: inline-block;">
+            <p id="reco-aleatoria" class="fw-bold text-primary" style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 0;">
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <!-- Cards de Anime -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="fotos de pagina/animes_top.png" loading="lazy" class="card-img-top" alt="Anime 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Animes top del momento</h5>
+                        <p class="card-text">¿Qué está rompiéndola en Japón y el mundo? Te contamos aquí.</p>
+                        <a href="top-animes.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="fotos de pagina/wai.jpg" loading="lazy" class="card-img-top" alt="Waifus">
+                    <div class="card-body">
+                        <h5 class="card-title">Tier de Waifus</h5>
+                        <p class="card-text">Las más bellas del multiverso anime elegidas por la comunidad.</p>
+                        <a href="tier-waifus.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="fotos de pagina/animacion.webp" loading="lazy" class="card-img-top" alt="Animaciones">
+                    <div class="card-body">
+                        <h5 class="card-title">Animes con mejores animaciones</h5>
+                        <p class="card-text">Obras visualmente espectaculares que debes ver sí o sí.</p>
+                        <a href="top-animes-mejores-animacion.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="fotos de pagina/papucho.webp" loading="lazy" class="card-img-top" alt="Papuchos">
+                    <div class="card-body">
+                        <h5 class="card-title">Top mejores papuchos 🥵</h5>
+                        <p class="card-text">Los señores con más facha del anime. Sin discusión.</p>
+                        <a href="top-papucho.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="fotos de pagina/meca.jpg" loading="lazy" class="card-img-top" alt="Openings">
+                    <div class="card-body">
+                        <h5 class="card-title">Top openings más escuchados</h5>
+                        <p class="card-text">Esos temas que no puedes dejar de cantar ni en la ducha.</p>
+                        <a href="top-opening.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="fotos de pagina/,+.png" loading="lazy" class="card-img-top" alt="Openings">
+                    <div class="card-body">
+                        <h5 class="card-title">Top mejores mangas</h5>
+                        <p class="card-text">Historias tan atrapantes que no podrás dejar de leer, incluso a las 3 a.m.</p>
+                        <a href="top-mangas.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Noticias -->
+        <h2 class="text-center section-title">📰 Últimas Noticias</h2>
+        <div class="row text-dark">
+            <div class="col-md-6">
+                <div class="alert alert-info" role="alert">
+                    Nuevo anime confirmado para verano 2025: <strong>Kimetsu no Yaiba - Infinity Arc</strong>.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-warning" role="alert">
+                    Rumores sobre la segunda temporada de <strong>Chainsaw Man</strong>. ¿Volverá el caos?
+                </div>
+            </div>
+        </div>
+
+        <!-- Recomendación Otaku -->
+<div class="text-center mt-5 mb-4">
+    <h2 class="section-title" style="font-size: 2rem; font-weight: 700; color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
+        🎌 Recomendación Otaku del Día
+    </h2>
+    <div class="alert alert-warning" role="alert" style="font-size: 1.1rem; line-height: 1.6; color: #212529; background-color: #86bddd; border: none; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <!-- Recomendación Aleatoria -->
+        <p id="recoAleatoria" style="margin-bottom: 0;">
+            <strong style="color: #d63384;">Boku no Pico</strong> — <span style="color: #c01ef1;">Nah mentira 😏</span>, mejor ve 
+            <strong style="color: #0d6efd;">Vinland Saga</strong>. Historia, acción y desarrollo brutal.
+        </p>
+        <button onclick="mostrarRecomendacion()" class="btnLogin-popup">Nuevo Consejo</button>
+    </div>
+
+    <!-- Lista de todas las recomendaciones -->
+ 
+    <ul id="listaRecomendaciones" style="list-style: none; padding: 0; color: #fff; font-size: 1rem; font-weight: 500;"></ul>
+</div>
+
+<!-- Modal para escribir recomendación -->
+<div id="modalRecomendacion" class="modal-reco">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h4 style="margin-bottom: 10px;">🎥 Deja tu recomendación de anime:</h4>
+        <textarea id="inputRecomendacion" rows="3" style="width: 100%; padding: 10px;" placeholder="Ej: Steins;Gate es una joya..."></textarea>
+        <button onclick="guardarRecomendacion()" style="margin-top: 10px;" class="btnLogin-popup">Guardar</button>
+    </div>
+</div>
+
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+        <div class="contaner" id="container">
+            <div>
+                <div class="form-container sign-up-container">
+                    <form action="#">
+                        <h1>Crea tu Cuenta</h1>
+                        <span>usa un correo valido por favor</span>
+                        <input type="text" placeholder="Name" id="signup-name" />
+                        <input type="email" placeholder="Email" id="signup-email" />
+                        <input type="password" placeholder="Password" id="signup-password" />
+                        <p id="signup-error-message" style="color: red; display: none; margin-top: 10px;"></p>
+                        <button id="lila">Registrar</button>
+                    </form>
+                </div>
+                
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h1>Iniciar Sesión</h1>
+                        <span>usa tu email que usaste en el registro</span>
+                        <input type="email" placeholder="Email" id="login-email" />
+                        <input type="password" placeholder="Password" id="login-password" />
+                        <p id="login-error-message" style="color: red; display: none; margin-top: 10px;"></p>
+                        <a href="olvidocontraseña.html">Olvidaste tu contraseña?</a>
+                        <button id="login-btn">Iniciar sesión</button>
+                    </form>
+                </div>
+                
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>¡Bienvenido!</h1>
+                        <p>Inicia sesión con tu cuenta</p>
+                        <button class="ghost" id="signIn">Inicia sesión</button>
+                        <ion-icon name="close-outline" id="close-button"onclick="closeForm()"></ion-icon></button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hola!!!</h1>
+                        <p>Crear tu cuenta</p>
+                        <button class="ghost" id="signUp">Registrar</button>
+                        <ion-icon name="close-outline" id="close-button"onclick="closeForm()"></ion-icon></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>&copy; 2025 Boris Saldarrega & Pierina Mendranda. Todos los derechos reservados.</p>
+    </footer>
+
+
+<script src="firebase.js"></script>
+<script src="spript.js"></script>
+<script src="validacion-de-registro.js"></script>
+<script src="base_datos"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

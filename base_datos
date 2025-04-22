@@ -1,0 +1,236 @@
+// Obtener elementos necesarios
+const toggleMenu = document.getElementById("toggleMenu");
+const menu = document.getElementById("hamburgerMenu");
+const avatar = document.getElementById("userAvatar");
+const userNameEl = document.getElementById("userName");
+const userEmailEl = document.getElementById("userEmail");
+const loginOption = document.getElementById("loginOption");
+const logoutOption = document.getElementById("logoutOption");
+const changeAccount = document.getElementById("changeAccount");
+const accountSettings = document.getElementById("accountSettings");
+const accountSettingsMenu = document.getElementById("accountSettingsMenu");
+const avatarInput = document.getElementById("avatarInput");
+
+let menuVisible = false;
+let cropper;
+
+// Mostrar/Ocultar el menú hamburguesa
+toggleMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menuVisible = !menuVisible;
+    menu.classList.toggle("show", menuVisible);
+});
+
+// Cerrar el menú al hacer clic fuera
+document.addEventListener("click", (e) => {
+    if (menuVisible && !menu.contains(e.target) && e.target !== toggleMenu) {
+        cerrarMenu();
+    }
+});
+
+// Función para cerrar el menú
+function cerrarMenu() {
+    menu.classList.remove("show");
+    menuVisible = false;
+}
+
+// Generar color aleatorio para el avatar
+function generarColorAleatorio() {
+    const colores = ["#f44336", "#e91e63", "#9c27b0", "#2196f3", "#4caf50", "#ff9800", "#795548"];
+    return colores[Math.floor(Math.random() * colores.length)];
+}
+
+// Mostrar mensaje tipo Toast
+function mostrarToast(mensaje) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = mensaje;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+// Obtener nombre de usuario actual
+function obtenerUsuarioActual() {
+    return localStorage.getItem("usuarioActual");
+}
+
+// Actualizar el menú con la información del usuario actual
+function actualizarMenuUsuario() {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const nombre = obtenerUsuarioActual();
+    const userData = users.find((user) => user.name === nombre);
+
+    avatar.innerHTML = ""; // Limpiar contenido del avatar
+
+    if (nombre && userData) {
+        const imagenBase64 = localStorage.getItem(`avatarImg_${nombre}`);
+
+        if (imagenBase64) {
+            const img = document.createElement("img");
+            img.src = imagenBase64;
+            img.style.width = "100%";
+            img.style.height = "100%";
+            img.style.borderRadius = "50%";
+            img.style.objectFit = "cover";
+            avatar.appendChild(img);
+        } else {
+            const inicial = nombre.charAt(0).toUpperCase();
+            avatar.textContent = inicial;
+            avatar.style.backgroundColor = localStorage.getItem(`color_${nombre}`) || generarColorAleatorio();
+            avatar.style.color = "white";
+        }
+
+        userNameEl.textContent = nombre;
+        userEmailEl.textContent = userData.email;
+        loginOption.style.display = "none";
+        logoutOption.style.display = "block";
+        changeAccount.style.display = "block";
+        accountSettings.style.display = "block";
+    } else {
+        avatar.innerHTML = `<ion-icon name="person-circle" style="font-size: 28px;"></ion-icon>`;
+        avatar.style.backgroundColor = "transparent";
+        avatar.style.color = "inherit";
+        userNameEl.textContent = "Invitado";
+        userEmailEl.textContent = "No has iniciado sesión";
+        loginOption.style.display = "block";
+        logoutOption.style.display = "none";
+        changeAccount.style.display = "none";
+        accountSettings.style.display = "none";
+    }
+}
+
+// Opciones del menú
+loginOption.addEventListener("click", () => {
+    document.querySelector(".btnLogin-popup")?.click();
+    cerrarMenu();
+});
+
+logoutOption.addEventListener("click", () => {
+    const nombre = obtenerUsuarioActual();
+    if (nombre) {
+        localStorage.removeItem(`color_${nombre}`);
+        localStorage.removeItem(`avatarImg_${nombre}`);
+    }
+    localStorage.removeItem("usuarioActual");
+    location.reload();
+});
+
+changeAccount.addEventListener("click", () => {
+    document.querySelector(".btnLogin-popup")?.click();
+    cerrarMenu();
+});
+
+accountSettings.addEventListener("click", () => {
+    cerrarMenu();
+    accountSettingsMenu.style.display = "block";
+});
+
+document.getElementById("changeUsername").addEventListener("click", () => {
+    const newUsername = prompt("Escribe tu nuevo nombre de usuario:");
+    if (newUsername) {
+        const currentUser = obtenerUsuarioActual();
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const userData = users.find((user) => user.name === currentUser);
+
+        if (userData) {
+            userData.name = newUsername;
+            localStorage.setItem("users", JSON.stringify(users));
+            localStorage.setItem("usuarioActual", newUsername);
+            actualizarMenuUsuario();
+            mostrarToast("Nombre de usuario actualizado con éxito.");
+        }
+    }
+});
+
+document.getElementById("changeEmail").addEventListener("click", () => {
+    const newEmail = prompt("Introduce tu nueva dirección de correo:");
+    if (newEmail) {
+        const currentUser = obtenerUsuarioActual();
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const userData = users.find((user) => user.name === currentUser);
+
+        if (userData) {
+            userData.email = newEmail;
+            localStorage.setItem("users", JSON.stringify(users));
+            actualizarMenuUsuario();
+            mostrarToast("Correo actualizado con éxito.");
+        }
+    }
+});
+
+// Avatar: abrir input
+avatar.addEventListener("click", () => {
+    if (obtenerUsuarioActual()) avatarInput.click();
+});
+
+avatarInput.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+        const imgBase64 = reader.result;
+        const nombre = obtenerUsuarioActual();
+        localStorage.setItem(`avatarImg_${nombre}`, imgBase64);
+        actualizarMenuUsuario();
+        mostrarToast("Imagen de perfil actualizada.");
+    };
+    reader.readAsDataURL(file);
+});
+
+document.getElementById("managePassword").addEventListener("click", () => {
+    const currentPassword = prompt("Introduce tu contraseña actual:");
+    const newPassword = prompt("Escribe tu nueva contraseña:");
+    
+    if (currentPassword && newPassword) {
+        const currentUser = obtenerUsuarioActual();
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const userData = users.find((user) => user.name === currentUser);
+
+        if (userData && userData.password === currentPassword) {
+            userData.password = newPassword;
+            localStorage.setItem("users", JSON.stringify(users));
+            mostrarToast("Contraseña actualizada con éxito.");
+        } else {
+            mostrarToast("La contraseña actual no es válida.");
+        }
+    }
+});
+
+document.getElementById("notificationsPreferences").addEventListener("click", () => {
+    const preferences = prompt("Configura tus preferencias de notificación (por ejemplo: 'Activar' o 'Desactivar'):");
+    if (preferences) {
+        const currentUser = obtenerUsuarioActual();
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const userData = users.find((user) => user.name === currentUser);
+
+        if (userData) {
+            userData.notifications = preferences;
+            localStorage.setItem("users", JSON.stringify(users));
+            mostrarToast("Preferencias de notificaciones actualizadas con éxito.");
+        }
+    }
+});
+
+document.getElementById("deleteAccount").addEventListener("click", () => {
+    const confirmation = confirm("¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.");
+    if (confirmation) {
+        const currentUser = obtenerUsuarioActual();
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users = users.filter((user) => user.name !== currentUser);
+
+        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.removeItem(`avatarImg_${currentUser}`);
+        localStorage.removeItem(`color_${currentUser}`);
+        localStorage.removeItem("usuarioActual");
+        location.reload();
+    }
+});
+
+document.getElementById("closeSettings").addEventListener("click", () => {
+    accountSettingsMenu.style.display = "none";
+    menu.classList.add("show");
+});
+
+window.addEventListener("storage", actualizarMenuUsuario);
+window.addEventListener("DOMContentLoaded", actualizarMenuUsuario);

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top openings más escuchados</title>
+  <link rel="icon" href="fotos de pagina/mundootaku.png" type="image/png">
+  <link rel="stylesheet" href="pruebabosstrap.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+  .card {
+  background-color: #f8f3f3; /* Fondo inicial blanco */
+  border: 2px solid transparent; /* Borde inicial */
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones sincronizadas */
+}
+
+.card:hover {
+  background-color: #5f5e5e; /* Fondo cambia a gris */
+  border-color: #5f5e5e; /* El borde también cambia a gris */
+  box-shadow: 0 0 15px #ff004c; /* Efecto de sombra */
+  cursor: pointer;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.card:hover .card-body {
+  background-color: #5f5e5e; /* El fondo del cuerpo de la tarjeta también cambia */
+  transition: background-color 0.3s ease-in-out; /* Sincronizar transición */
+}
+
+.card-img-top {
+  height: 200px; /* Altura fija para uniformidad */
+  width: 100%; /* Asegura que ocupen todo el ancho disponible */
+  object-fit: contain; /* Las imágenes se ajustan dentro del contenedor sin ser recortadas */
+  background-color: #f8f3f3; /* Fondo inicial blanco */
+  transition: background-color 0.3s ease-in-out; /* Fondo de la imagen con transición */
+}
+
+.card:hover .card-img-top {
+  background-color: #5f5e5e; /* Fondo de la imagen cambia a gris */
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 180px;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+<header class="text-center py-4">
+  <h1>🎙 OPENINGS MÁS ESCUCHADOS 🎙</h1>
+  <p class="lead">Canciones que viven gratis en nuestra cabeza 🍥</p>
+</header>
+
+<main class="container mt-5">
+  <section class="row g-4">
+
+    <!-- Opening: Unravel -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/unravel.jpeg" data-gif="OPENING/Unravel-Tokyo Ghoul.gif" class="card-img-top hover-gif" alt="Unravel">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/Tokyo_Ghoul-_Unravel_Japanese.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Unravel - Tokyo Ghoul</h5>
+          <p class="card-text">Un clásico moderno que te hace sentir mil emociones.</p>
+          <span class="badge bg-danger">Emocional</span>
+          <span class="badge bg-dark">Legendario</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Oh, dime, dime... ¿quién es que soy?<br>
+            ¿Quién dentro de mí ahora está?<br>
+            Roto estoy, perdido en el dolor<br>
+            No sé cómo amar.
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Kussou Mesorogiwi -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/Kussou Mesorogiwi.avif" data-gif="OPENING/kusgo.gif" class="card-img-top hover-gif" alt="Kussou Mesorogiwi">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/kosgu.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Kussou Mesorogiwi - Mirai Nikki</h5>
+          <p class="card-text">Oscuro, caótico y adictivo.</p>
+          <span class="badge bg-warning text-dark">Psicológico</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Un mundo loco es mi hogar<br>
+            Los gritos son mi dulce canción<br>
+            Entre el amor y la destrucción<br>
+            ¡Todo va a explotar!
+          </small> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Blue Bird -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/Blue Bird-Naruto Shippuden.jpg" data-gif="OPENING/Blue Bird.gif" class="card-img-top hover-gif" alt="Blue Bird">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/bluebird.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Blue Bird - Naruto Shippuden</h5>
+          <p class="card-text">Icónico y melancólico como la serie.</p>
+          <span class="badge bg-primary">Nostalgia</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Si pudiera volar lejos de aquí<br>
+            Como ese azul pajarillo en el cielo<br>
+            Mis sueños me llevarán<br>
+            Donde el viento me quiera guiar.
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Idol -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/oshi_no_ko.jpg" data-gif="OPENING/chara_baby.webp" class="card-img-top hover-gif" alt="Idol">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/oshi-no-ko.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Idol - Oshi no Ko</h5>
+          <p class="card-text">Tan pegajoso que no podrás dejar de escucharlo.</p>
+          <span class="badge bg-danger">Trending</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Brillando como estrella fugaz<br>
+            Con una sonrisa que oculta verdad<br>
+            La mentira es mi verdad<br>
+            ¡Así es el show!
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Gurenge -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/Gurenge.jpg" data-gif="OPENING/gurenge.gif" class="card-img-top hover-gif" alt="Gurenge">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/gurenge.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Gurenge - LiSA (Kimetsu no Yaiba)</h5>
+          <p class="card-text">Poderoso y épico. Un grito de batalla musical.</p>
+          <span class="badge bg-danger">Shounen</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Romperé este destino cruel<br>
+            Con mi espada de voluntad<br>
+            Aunque arda el dolor<br>
+            ¡Jamás me detendrán!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Mi corazón encantado -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/MiCorazónEncantado.jpg" data-gif="OPENING/MiCorazón.gif" class="card-img-top hover-gif" alt="Mi Corazón Encantado">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/Mi-Corazón-Encantado.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Mi Corazón Encantado - Dragon Ball GT</h5>
+          <p class="card-text">La infancia resumida en una canción.</p>
+          <span class="badge bg-success">Latino Legend</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Quisiera poder olvidarme de ti<br>
+            Con otra llenar este vacío en mí<br>
+            Mi corazón encantado vibra<br>
+            Por el polvo de esperanza y magia.
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Cha-La Head-Cha-La -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/chala.avif" data-gif="OPENING/chala.gif" class="card-img-top hover-gif" alt="Cha-La Head-Cha-La">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/chala.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Cha-La Head-Cha-La - Dragon Ball Z</h5>
+          <p class="card-text">La energía pura del anime clásico.</p>
+          <span class="badge bg-warning text-dark">Retro</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Cha-La Head-Cha-La<br>
+            ¡No importa lo que suceda!<br>
+            Siempre el ánimo mantendré<br>
+            ¡Cha-La Head-Cha-La!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Pegasus Fantasy -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/pegasus.jpeg" data-gif="OPENING/pegasus.gif" class="card-img-top hover-gif" alt="Pegasus Fantasy">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/pegasus.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Pegasus Fantasy - Saint Seiya</h5>
+          <p class="card-text">Una oda al valor y la amistad.</p>
+          <span class="badge bg-secondary">Épico</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Pegasus Fantasy... ¡Una ilusión!<br>
+            Vuela hacia mí<br>
+            Rompe el cielo y resplandece<br>
+            ¡Serás un héroe!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Kittai Kitan -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/Kaikai_Kitan-Portada_Limitada.webp" data-gif="OPENING/kakai.gif" class="card-img-top hover-gif" alt="Kittai Kitan">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/kakai.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Kittai Kitan - Jujutsu Kaisen</h5>
+          <p class="card-text">Oscuro, moderno, con una vibra única.</p>
+          <span class="badge bg-dark">Moderno</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Las voces que no callarán<br>
+            El caos que gira en mi interior<br>
+            En este mundo podrido<br>
+            ¡Aún puedo luchar!
+          </small>  
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: We Are! -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/onepiece_op1.webp" data-gif="OPENING/one.gif" class="card-img-top hover-gif" alt="We Are!">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/onepice.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">We Are! - One Piece</h5>
+          <p class="card-text">Clásico shonen lleno de aventura.</p>
+          <span class="badge bg-primary">Clásico</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            ¡Zarpemos ya! ¡Atravesemos los mares!<br>
+            En busca del gran tesoro<br>
+            One Piece es lo que quiero<br>
+            ¡Somos los piratas!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Guren no Yumiya -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/guren.jpg" data-gif="OPENING/gurentt.gif" class="card-img-top hover-gif" alt="Guren no Yumiya">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/gurenttop.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Guren no Yumiya - Attack on Titan</h5>
+          <p class="card-text">Épico, poderoso y lleno de energía.</p>
+          <span class="badge bg-warning">Épico</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            ¡Sie sind das Essen und wir sind die Jäger!<br>
+            ¡Levanta el vuelo, lanza tu lanza!<br>
+            ¡Por la libertad vamos a luchar!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Silhouette -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/silhoutte.jpeg" data-gif="OPENING/silhoutter.gif" class="card-img-top hover-gif" alt="Silhouette">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/silhoutternt.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Silhouette - Naruto Shippuden</h5>
+          <p class="card-text">Motivador y lleno de nostalgia ninja.</p>
+          <span class="badge bg-success">Shonen</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Corriendo hacia el mañana sin mirar atrás<br>
+            Las sombras del pasado no me detendrán<br>
+            El viento guía mi voluntad ninja.
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Asterisk -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/blech.jpg" data-gif="OPENING/blechs.gif" class="card-img-top hover-gif" alt="Asterisk">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/bleach_op1.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Asterisk - Bleach</h5>
+          <p class="card-text">Con ritmo funky y estilo urbano.</p>
+          <span class="badge bg-info">Clásico</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            No te olvides, siempre estaré aquí<br>
+            Aunque el tiempo pase sin parar<br>
+            Mi voz resonará hasta llegar a ti.
+          </small>           
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Again -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/fma_again.webp" data-gif="OPENING/fma_again.gif" class="card-img-top hover-gif" alt="Again">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/fma_again.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Again - Fullmetal Alchemist: Brotherhood</h5>
+          <p class="card-text">Emotivo, energético y memorable.</p>
+          <span class="badge bg-danger">Impactante</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            El tiempo avanza, pero seguimos de pie<br>
+            A pesar de todo lo perdido<br>
+            El sacrificio no fue en vano<br>
+            ¡Levántate de nuevo, sigue adelante!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: My War -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/MyWar-Attack on Titan.jpeg" data-gif="OPENING/MyWar-Attack on Titan.gif" class="card-img-top hover-gif" alt="My War">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/mywar.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">My War - Attack on Titan</h5>
+          <p class="card-text">Experimental, perturbador y original.</p>
+          <span class="badge bg-secondary">Denso</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            El sonido de la guerra retumba<br>
+            A través de mis venas<br>
+            Mi alma llora, pero no me detendré<br>
+            Este es mi propio camino de batalla.
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Inferno -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/Inferno.avif" data-gif="OPENING/inferno.gif" class="card-img-top hover-gif" alt="Inferno">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/inferno.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Inferno - Fire Force</h5>
+          <p class="card-text">Con ritmo ardiente y gran animación.</p>
+          <span class="badge bg-warning">Fuego</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            El fuego arde dentro de mí<br>
+            En cada chispa, hay una guerra<br>
+            Nunca me rendiré, siempre lucharé<br>
+            Hasta que el mundo se apague.
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Hikaru Nara -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/yorlie.jpg" data-gif="OPENING/yorlie.gif" class="card-img-top hover-gif" alt="Hikaru Nara">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/hiraku.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Hikaru Nara - Your Lie in April</h5>
+          <p class="card-text">Hermoso, melódico y muy emotivo.</p>
+          <span class="badge bg-danger">Romance</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            La luz que brilla en la oscuridad<br>
+            El viento que sopla entre las notas<br>
+            A través de la música, encontré mi paz<br>
+            Nunca te olvidaré, siempre serás mi luz.
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: The Day -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/bnha_the_day.webp" data-gif="OPENING/bnha_the_day.gif" class="card-img-top hover-gif" alt="The Day">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/bnha_the_day.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">The Day - Boku no Hero Academia</h5>
+          <p class="card-text">Inspirador y lleno de energía de héroe.</p>
+          <span class="badge bg-success">Shonen</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Este es el día, el que hemos esperado<br>
+            Con fuerza y valentía, alcanzaremos el cielo<br>
+            No importa cuán grande sea la oscuridad<br>
+            ¡Nuestros héroes brillarán con su luz!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Departure! -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/HunterXHunter.jpg" data-gif="OPENING/depaure.gif    " class="card-img-top hover-gif" alt="Departure!">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/depaure.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Departure! - Hunter x Hunter</h5>
+          <p class="card-text">Divertido, aventurero y entrañable.</p>
+          <span class="badge bg-primary">Clásico</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            ¡Empezamos nuestra aventura!<br>
+            El mundo está lleno de maravillas<br>
+            Nunca nos rendiremos, siempre hacia adelante<br>
+            ¡La emoción de descubrir está en nuestro corazón!
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Crossing Field -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/Crossing.jpg" data-gif="OPENING/crossing.gif" class="card-img-top hover-gif" alt="Crossing Field">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/crossing.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Crossing Field - Sword Art Online</h5>
+          <p class="card-text">Épico, romántico y futurista.</p>
+          <span class="badge bg-light text-dark">Aventura</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Cruzando el campo de batalla, juntos<br>
+            Nuestro destino está en nuestras manos<br>
+            Venciendo las sombras, alcanzaremos la luz<br>
+            El futuro nos espera, con valentía enfrentamos el miedo.
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Butter-Fly -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/digimon.jpg" data-gif="OPENING/digimon.gif" class="card-img-top hover-gif" alt="Butter-Fly">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/butterfly.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">Butter-Fly - Digimon Adventure</h5>
+          <p class="card-text">Un clásico nostálgico que marcó generaciones.</p>
+          <span class="badge bg-warning text-dark">Clásico</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            Vuela alto, como una mariposa<br>
+            Superando las sombras y el miedo<br>
+            Enfrenta el futuro, no mires atrás<br>
+            Juntos siempre, nos levantamos.
+          </small>            
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: El gran soñador -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+        <img src="fotos de pagina/digi.jpg" data-gif="OPENING/soñador.gif" class="card-img-top hover-gif" alt="El gran soñador">
+        <audio preload="auto" class="audio-snippet">
+          <source src="audio_de_opneing/el_gran_soñador.mp3" type="audio/mpeg">
+        </audio>
+        <div class="card-body">
+          <h5 class="card-title">El gran soñador - Digimon Tamers (Latino)</h5>
+          <p class="card-text">Versión latina llena de emoción y aventura.</p>
+          <span class="badge bg-primary">Latino</span>
+          <br><br>
+          <small><strong>Letra (fragmento):</strong><br>
+            ¡Soy el gran soñador!<br>
+            Quiero volar, quiero llegar muy lejos<br>
+            La fuerza del corazón<br>
+            Me llevará a donde el destino espere...
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opening: Chikyuugi -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+      <img src="fotos de pagina/soda.jpg" data-gif="OPENING/soda.gif" class="card-img-top hover-gif" alt="Chikyuugi">
+      <audio preload="auto" class="audio-snippet">
+        <source src="audio_de_opneing/soda.mp3" type="audio/mpeg">
+      </audio>
+      <div class="card-body">
+        <h5 class="card-title">Chikyuugi - Yumi Matsuzawa</h5>
+        <p class="card-text">Poderosa y emotiva, una declaración de amor por la Tierra.</p>
+        <span class="badge bg-success">Emotiva</span>
+        <br><br>
+        <small><strong>Letra (fragmento):</strong><br>
+          La Tierra canta bajo nuestro sol<br>
+          Unidos, podremos superar cualquier desafío<br>
+          El amor por nuestro hogar nunca se apaga<br>
+          Un mundo en el que todos podamos vivir.
+        </small>          
+      </div>
+    </div>
+  </div>
+
+  <!-- Opening: Aozora no Namida -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow" onmouseover="playAudio(this)" onmouseout="pauseAudio(this)">
+      <img src="fotos de pagina/azora.jpg" data-gif="OPENING/azora.gif" class="card-img-top hover-gif" alt="Aozora no Namida">
+      <audio preload="auto" class="audio-snippet">
+        <source src="audio_de_opneing/aozora_no_namida.mp3" type="audio/mpeg">
+      </audio>
+      <div class="card-body">
+        <h5 class="card-title">Aozora no Namida - Naruto Shippuden</h5>
+        <p class="card-text">Lleno de emociones, con una melodía que calma el alma.</p>
+        <span class="badge bg-info">Emotivo</span>
+        <br><br>
+        <small><strong>Letra (fragmento):</strong><br>
+          Dame, subete, toki no naka<br>
+          Koko kara mi wo yudanete<br>
+          Kimi to boku wa megurimashita<br>
+          Kawaranai omoi ga aruku
+        </small>        
+      </div>
+    </div>
+  </div>
+  </section>
+  <div class="text-center mt-5">
+    <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+  </div>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.addEventListener("click", () => {
+      const audios = document.querySelectorAll(".audio-snippet");
+      audios.forEach(audio => {
+        audio.play().then(() => {
+          audio.pause();
+          audio.currentTime = 0;
+        }).catch(e => {
+          console.log("Primera reproducción preactivada falló:", e);
+        });
+      });
+    }, { once: true });
+  });
+
+  function playAudio(card) {
+    const img = card.querySelector('.hover-gif');
+    const gifSrc = img.getAttribute('data-gif');
+    img.setAttribute('data-static', img.src);
+    img.src = gifSrc;
+
+    const audio = card.querySelector('.audio-snippet');
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play().catch(err => {
+        console.warn("No se pudo reproducir el audio automáticamente:", err);
+      });
+    }
+  }
+
+  function pauseAudio(card) {
+    const img = card.querySelector('.hover-gif');
+    const staticSrc = img.getAttribute('data-static');
+    if (staticSrc) img.src = staticSrc;
+
+    const audio = card.querySelector('.audio-snippet');
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+</script>
+
+</body>
+</html>
