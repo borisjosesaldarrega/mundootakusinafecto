@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Mangas</title>
+    <link rel="stylesheet" href="pruebabosstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            font-family: 'Nunito', sans-serif;
+            color: #f0f0f0;
+        }
+    
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #f8f9fa;
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+        }
+    
+        .card-img-top {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+    
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            color: #CCC;
+        }
+    
+        .card-text {
+            font-size: 0.95rem;
+            color: #021736;
+        }
+    
+        .badge {
+            margin-right: 4px;
+            margin-top: 6px;
+            font-size: 0.8rem;
+            padding: 6px 10px;
+            border-radius: 20px;
+            opacity: 0.9;
+        }
+    
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    
+        @media (max-width: 768px) {
+            .card-img-top {
+                max-height: 220px;
+            }
+        }
+    </style>    
+
+</head>
+<body>
+
+    <main class="container mt-5 fade-in">
+        <h2 class="section-title text-center text-white">Top Mangas</h2>
+        <div class="row g-4">
+
+           <!-- Vagabond -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/Vagabond.avif" class="card-img-top" alt="Vagabond">
+                    <div class="card-body">
+                        <h5 class="card-title">Vagabond</h5>
+                        <p class="card-text">Basado en la vida de Miyamoto Musashi. Una exploración filosófica de la fuerza, la soledad y la iluminación.</p>
+                        <span class="badge bg-danger">Takehiko Inoue</span>
+                        <span class="badge bg-primary">Samurái</span>
+                        <span class="badge bg-info">Reflexivo</span>
+                        <span class="badge bg-dark text-white">Obra de Arte</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monster -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/Monster.webp" class="card-img-top" alt="Monster">
+                    <div class="card-body">
+                        <h5 class="card-title">Monster</h5>
+                        <p class="card-text">Un thriller psicológico brillante sobre la moral, el destino y los horrores humanos más reales.</p>
+                        <span class="badge bg-danger">Naoki Urasawa</span>
+                        <span class="badge bg-primary">Thriller</span>
+                        <span class="badge bg-info">Psicológico</span>
+                        <span class="badge bg-dark text-white">Suspenso Puro</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oyasumi Punpun -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/Oyasumi.png" class="card-img-top" alt="Oyasumi Punpun">
+                    <div class="card-body">
+                        <h5 class="card-title">Oyasumi Punpun</h5>
+                        <p class="card-text">Una montaña rusa emocional cruda y existencial que retrata la juventud y el dolor con un estilo único.</p>
+                        <span class="badge bg-danger">Inio Asano</span>
+                        <span class="badge bg-primary">Drama</span>
+                        <span class="badge bg-info">Existencialismo</span>
+                        <span class="badge bg-dark text-white">Dolorosamente Real</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- One Piece -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/one piece.jpg" class="card-img-top" alt="One Piece">
+                    <div class="card-body">
+                        <h5 class="card-title">One Piece</h5>
+                        <p class="card-text">La odisea pirata más larga y amada, con una narrativa magistral, mundos vastos y personajes inolvidables.</p>
+                        <span class="badge bg-danger">Eiichiro Oda</span>
+                        <span class="badge bg-primary">Aventura</span>
+                        <span class="badge bg-info">Mundo Vivo</span>
+                        <span class="badge bg-dark text-white">Luffy Gear 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tokyo Ghoul -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/ghoul.webp" class="card-img-top" alt="Tokyo Ghoul">
+                    <div class="card-body">
+                        <h5 class="card-title">Tokyo Ghoul</h5>
+                        <p class="card-text">Una mirada profunda a la dualidad humana, la represión y el dolor, todo con un arte increíblemente expresivo.</p>
+                        <span class="badge bg-danger">Sui Ishida</span>
+                        <span class="badge bg-primary">Ghouls</span>
+                        <span class="badge bg-info">Tragedia</span>
+                        <span class="badge bg-dark text-white">Máscara Sangrienta</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chainsaw Man -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/chainman.jpg" class="card-img-top" alt="Chainsaw Man">
+                    <div class="card-body">
+                        <h5 class="card-title">Chainsaw Man</h5>
+                        <p class="card-text">Caótico, emocional y filosófico. El manga de Fujimoto es un viaje entre el nihilismo y el deseo de vivir.</p>
+                        <span class="badge bg-danger">Tatsuki Fujimoto</span>
+                        <span class="badge bg-primary">Demonios</span>
+                        <span class="badge bg-info">Caos</span>
+                        <span class="badge bg-dark text-white">Existencia Bruta</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Death Note -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/deathnote.jpg" class="card-img-top" alt="Death Note">
+                    <div class="card-body">
+                        <h5 class="card-title">Death Note</h5>
+                        <p class="card-text">La batalla intelectual entre Light y L, una historia atrapante sobre justicia y poder absoluto.</p>
+                        <span class="badge bg-danger">Tsugumi Ohba</span>
+                        <span class="badge bg-primary">Suspenso</span>
+                        <span class="badge bg-info">Dios de la Muerte</span>
+                        <span class="badge bg-dark text-white">Giro Mental</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pluto -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/Pluto.webp" class="card-img-top" alt="Pluto">
+                    <div class="card-body">
+                        <h5 class="card-title">Pluto</h5>
+                        <p class="card-text">Una reinvención adulta del universo de Astro Boy. Intriga, emoción y una reflexión sobre la humanidad.</p>
+                        <span class="badge bg-danger">Naoki Urasawa</span>
+                        <span class="badge bg-primary">Ciencia Ficción</span>
+                        <span class="badge bg-info">Robots & Ética</span>
+                        <span class="badge bg-dark text-white">Humanidad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blue Lock -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card"> 
+                    <img src="fotos de pagina/bluelock.webp" class="card-img-top" alt="Blue Lock">
+                    <div class="card-body">
+                        <h5 class="card-title">Blue Lock</h5>
+                        <p class="card-text">Una batalla de egos y talento en el fútbol. Competencia intensa y arte lleno de adrenalina.</p>
+                        <span class="badge bg-danger">Muneyuki Kaneshiro</span>
+                        <span class="badge bg-primary">Deporte</span>
+                        <span class="badge bg-info">Psicológico</span>
+                        <span class="badge bg-dark text-white">Ego al Máximo</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="text-center mt-5">
+            <a href="index.html">
+                <button class="btn btn-primary">Regresa al inicio</button>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
