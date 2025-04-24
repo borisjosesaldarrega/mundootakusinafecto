@@ -3,6 +3,8 @@ body {
     background-image: url('fotos de pagina/fondo_estrellas.jpg');
     background-size: cover;
     background-attachment: fixed;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 header {
@@ -432,6 +434,8 @@ a {
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform: scale(0.95);
   opacity: 0;
+  background: var(--menu-bg);
+  box-shadow: 0 8px 20px var(--menu-shadow);
 }
 .user-info p {
   margin: 0;
@@ -619,4 +623,27 @@ a {
 
 #closeSettings:hover {
   background-color: #d32f2f;
+}
+
+/* Estilos por defecto (modo claro) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --menu-bg: #fff;
+  --menu-shadow: rgba(0, 0, 0, 0.15);
+  --highlight: #f2f2f2;
+}
+
+/* Modo oscuro */
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --menu-bg: #2c2c2c;
+  --menu-shadow: rgba(255, 255, 255, 0.05);
+  --highlight: #333;
+}
+
+.menu-options li:hover,
+.account-settings-menu li:hover {
+  background-color: var(--highlight);
 }
