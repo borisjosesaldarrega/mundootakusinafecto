@@ -221,6 +221,24 @@ document.getElementById('deleteAccountOption').addEventListener('click', () => {
     }
 });
 
+document.getElementById('toggleDarkMode').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  // Guardar preferencia en localStorage o Firebase
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('modoOscuro', isDark);
+});
+
+// Al cargar la página
+window.addEventListener('DOMContentLoaded', () => {
+  const modoOscuroGuardado = localStorage.getItem('modoOscuro') === 'true';
+  if (modoOscuroGuardado) {
+    document.body.classList.add('dark-mode');
+  }
+});
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('modoOscuro') === 'true') {
         document.body.classList.add('dark-mode');
