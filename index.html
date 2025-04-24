@@ -16,25 +16,40 @@
     </header>
 
        <!-- Botón hamburguesa -->
-        <button id="toggleMenu" class="hamburger-btn" aria-label="Menú de usuario">☰</button>
+<button id="toggleMenu" class="hamburger-btn" aria-label="Menú de usuario">☰</button>
 
-        <!-- Menú hamburguesa -->
-        <div class="hamburger-menu" id="hamburgerMenu">
-        <div class="avatar-section" id="avatarSection">
-            <div class="avatar" id="userAvatar"></div>
-            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
-            <div class="user-info">
-            <p id="userName" >Invitado</p>
-            <p id="userEmail">No has iniciado sesión</p>
-            </div>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <div class="avatar-section" id="avatarSection">
+        <div class="avatar" id="userAvatar"></div>
+        <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+        <div class="user-info">
+          <p id="userName">Invitado</p>
+          <p id="userEmail">No has iniciado sesión</p>
         </div>
-        
-        <ul class="menu-options" id="menuOptions">
-            <li id="loginOption" class="btnLogin-popup">Iniciar sesión</li>
-            <li id="changeAccount" style="display: none;">Cambiar cuenta</li>
-            <li id="logoutOption" style="display: none;">Cerrar sesión</li>
+      </div>
+    
+      <ul class="menu-options" id="menuOptions">
+        <li id="loginOption" class="btnLogin-popup">Iniciar sesión</li>
+        <li id="changeAccount" style="display: none;">Cambiar cuenta</li>
+        <li id="logoutOption" style="display: none;">Cerrar sesión</li>
+    
+        <!-- Opción Configuración -->
+        <li id="settingsToggle" class="has-submenu">⚙️ Configuración</li>
+        <ul class="submenu" id="settingsMenu" style="display: none;">
+          <li id="editNameOption">Editar nombre</li>
+          <li id="editEmailOption">Cambiar correo</li>
+          <li id="editPasswordOption">Cambiar contraseña</li>
+          <li id="changeAvatarOption">Cambiar avatar</li>
+          <li id="toggleDarkMode">Modo oscuro</li>
+          <li id="notificationSettings">Notificaciones</li>
+          <li id="deleteAccountOption">Eliminar cuenta</li>
         </ul>
-        </div>
+    
+        <li id="helpOption">❓ Soporte / Ayuda</li>
+      </ul>
+    </div>
+    
 
     <div class="text-center mt-4 mb-5">
         <h2 style="font-size: 2rem; font-weight: 700; color: #0067ce; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">
