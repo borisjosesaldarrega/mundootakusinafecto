@@ -15,17 +15,20 @@
         <p>Todo sobre waifus, mangas, animes, y lolis (con responsabilidad)</p>
     </header>
 
-       <!-- Botón hamburguesa -->
-<button id="toggleMenu" class="hamburger-btn" aria-label="Menú de usuario">☰</button>
-
+    <!-- Botón hamburguesa -->
+    <button id="toggleMenu" class="hamburger-btn" aria-label="Menú de usuario">☰</button>
+    
     <!-- Menú hamburguesa -->
     <div class="hamburger-menu" id="hamburgerMenu">
       <div class="avatar-section" id="avatarSection">
-        <div class="avatar" id="userAvatar"></div>
+        <div class="avatar" id="userAvatar">
+          <!-- Si el usuario tiene imagen se inserta aquí con JS -->
+          <!-- <img src="..." alt="Avatar de usuario"> -->
+        </div>
         <input type="file" id="avatarInput" accept="image/*" style="display: none;">
         <div class="user-info">
           <p id="userName">Invitado</p>
-          <p id="userEmail">No has iniciado sesión</p>
+          <p id="userEmail" class="email">No has iniciado sesión</p>
         </div>
       </div>
     
@@ -36,7 +39,10 @@
     
         <!-- Opción Configuración -->
         <li id="settingsToggle" class="has-submenu">⚙️ Configuración</li>
-        <ul class="submenu" id="settingsMenu" style="display: none;">
+    
+        <!-- Submenú de configuración -->
+        <ul class="account-settings-menu" id="settingsMenu" style="display: none;">
+          <h4>Opciones de cuenta</h4>
           <li id="editNameOption">Editar nombre</li>
           <li id="editEmailOption">Cambiar correo</li>
           <li id="editPasswordOption">Cambiar contraseña</li>
@@ -44,12 +50,12 @@
           <li id="toggleDarkMode">Modo oscuro</li>
           <li id="notificationSettings">Notificaciones</li>
           <li id="deleteAccountOption">Eliminar cuenta</li>
+          <button id="closeSettings">Cerrar configuración</button>
         </ul>
     
         <li id="helpOption">❓ Soporte / Ayuda</li>
       </ul>
     </div>
-    
 
     <div class="text-center mt-4 mb-5">
         <h2 style="font-size: 2rem; font-weight: 700; color: #0067ce; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">
